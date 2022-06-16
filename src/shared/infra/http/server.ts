@@ -3,13 +3,16 @@ import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors";
 import swagger from "swagger-ui-express";
 
-import "./database";
+import createConnection from "@shared/infra/typeorm";
 
-import "./shared/container";
+import "@shared/container";
 
-import { AppError } from "./errors/AppError";
+import { AppError } from "@shared/errors/AppError";
+
+import swaggerFile from "../../../swagger.json";
 import { router } from "./routes";
-import swaggerFile from "./swagger.json";
+
+createConnection();
 
 const app = express();
 
@@ -34,4 +37,4 @@ app.use(
   }
 );
 
-app.listen(3333, () => console.log("Server is running!"));
+app.listen(3333, () => console.log("Server is running! 🚀"));
