@@ -77,6 +77,6 @@ O usuário deve estar logado na aplicação
 # Recuperar Senha
 
 **RF**
-- O usuário precisa informar uma nova senha
-- O link enviado para a recuperação deve expirar em 3 horas
+O usuário precisa informar uma nova senha
+O link enviado para a recuperação deve expirar em 3 horas
  
