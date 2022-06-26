@@ -38,7 +38,7 @@ class CreateRentalUseCase {
       throw new AppError("Car is unavailable");
     }
 
-    const rentalOpenToUser = await this.rentalsRepository.findOpenRentalByUse(
+    const rentalOpenToUser = await this.rentalsRepository.findOpenRentalByUser(
       user_id
     );
 

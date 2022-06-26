@@ -73,4 +73,10 @@ Deve ser possível realizar a busca de todos os alugueis para o usuário
 
 **RN**
 O usuário deve estar logado na aplicação
+
+# Recuperar Senha
+
+**RF**
+- O usuário precisa informar uma nova senha
+- O link enviado para a recuperação deve expirar em 3 horas
  

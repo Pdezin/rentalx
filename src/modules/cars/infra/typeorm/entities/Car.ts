@@ -16,9 +16,10 @@ import { Specification } from "./Specification";
 @Entity("cars")
 class Car {
   constructor() {
+    this.available = true;
+
     if (!this.id) {
       this.id = uuid();
-      this.available = true;
     }
   }
 
