@@ -1,12 +1,13 @@
 import "reflect-metadata";
+import "dotenv/config";
 import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors";
 import swagger from "swagger-ui-express";
 
+import { AppError } from "@shared/errors/AppError";
 import createConnection from "@shared/infra/typeorm";
 
 import "@shared/container";
-import { AppError } from "@shared/errors/AppError";
 
 import swaggerFile from "../../../swagger.json";
 import { router } from "./routes";
