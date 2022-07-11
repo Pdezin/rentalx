@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
           source: "., !node_modules"
-          target: "test"
+          target: "~/app/rentx"
         
       - name: Update API
         uses: appleboy/ssh-action@master
@@ -40,6 +40,8 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
+          source: "., !node_modules, !ormconfig.json, !docker-compose.yml"
+          target: "~/app/rentx"
           script: |
             cd ~/app/rentx
             yarn
